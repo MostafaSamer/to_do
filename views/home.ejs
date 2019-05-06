@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+        <title>To-do</title>
+    </head>
+    <body>
+        <br><br><br>
+        <div class="row">
+            <div class="col-7 mx-auto alert alert-dark rounded">
+                <div class="form">
+                    <form class="form form-inline" action="" method="post">
+                        <br>
+                        <input type="text" name="mess" value="" class="form-control col mx-auto">
+                        <button type="submit" class="btn btn-primary" formaction="/add" style="margin-left: 5px">Add todo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- id = cuss.id -->
+        <!-- rev = cuss.key -->
+        <!-- mess = cuss.value -->
+        <% cuss.forEach((cuss)=> { %>
+            <div class="row">
+                <div class="col-7 mx-auto alert alert-dark rounded">
+                    <div class="form">
+                        <form class="form form-inline" action="" method="post">
+                            <input type="hidden" name="id" value="<%= cuss.id %>">
+                            <input type="hidden" name="rev" value="<%= cuss.key %>">
+                            <label for="" class="form-control col mx-auto"><%= cuss.value %></label>
+                            <button type="submit" class="btn btn-danger" formaction="/delete" style="margin-left: 5px">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </body>
+    <script src="/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
+</html>
+
+
+<!--
+<div class="row">
+    <div class="col-7 mx-auto alert alert-dark rounded">
+        <div class="form">
+            <form class="form form-inline" action="" method="post">
+                <br>
+                <input type="hidden" name="id" value="">
+                <label for="" class="form-control col mx-auto">The data goes here</label>
+                <button type="submit" class="btn btn-danger" formaction="/delete" style="margin-left: 5px">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+-->
