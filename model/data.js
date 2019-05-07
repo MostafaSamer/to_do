@@ -8,7 +8,7 @@ const couch = new nodeCouchdb({
     }
 })
 
-const dbName = 'to_do';
+const dbName = 'todo';
 const todo_view = "_design/todo/_view/todo-app";
 
 const get_data = function(callback) {
