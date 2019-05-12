@@ -11,5 +11,5 @@
 <h4>Database info</h4>
 
 function (doc) {
-  emit(doc._rev, doc.messs);
+  emit(doc._rev, doc.mess);
 }
